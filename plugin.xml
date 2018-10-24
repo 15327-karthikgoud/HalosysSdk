@@ -4,6 +4,14 @@
    <js-module name="HalosysSDK" src="www/HalosysSDK.js">
       <clobbers target="HalosysSDK" />
    </js-module>
+   <platform name="ios">
+      <config-file parent="/*" target="config.xml">
+         <feature name="HalosysSDK">
+            <param name="ios-package" value="HalosysSDK" />
+         </feature>
+      </config-file>
+      <source-file src="src/ios/HalosysSDK.m" />
+   </platform>
    <platform name="android">
       <config-file parent="/*" target="res/xml/config.xml">
          <feature name="HalosysSDK">
@@ -12,13 +20,5 @@
       </config-file>
       <config-file parent="/*" target="AndroidManifest.xml" />
       <source-file src="src/android/HalosysSDK.java" target-dir="src/cordova/plugin/halosys/sdk/HalosysSDK" />
-   </platform>
-   <platform name="ios">
-      <config-file parent="/*" target="config.xml">
-         <feature name="HalosysSDK">
-            <param name="ios-package" value="HalosysSDK" />
-         </feature>
-      </config-file>
-      <source-file src="src/ios/HalosysSDK.m" />
    </platform>
 </plugin>
