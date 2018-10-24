@@ -1,2 +1,24 @@
-<?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin-halosys-sdk" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android"><name>HalosysSDK</name><js-module name="HalosysSDK" src="www/HalosysSDK.js"><clobbers target="HalosysSDK" /></js-module><platform name="android"><config-file parent="/*" target="res/xml/config.xml"><feature name="HalosysSDK"><param name="android-package" value="cordova.plugin.halosys.sdk.HalosysSDK" /></feature></config-file><config-file parent="/*" target="AndroidManifest.xml" /><source-file src="src/android/HalosysSDK.java" target-dir="src/cordova/plugin/halosys/sdk/HalosysSDK" /></platform><platform name="ios"><config-file parent="/*" target="config.xml"><feature name="HalosysSDK"><param name="ios-package" value="HalosysSDK" /></feature></config-file><source-file src="src/ios/HalosysSDK.m" /></platform></plugin>
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-halosys-sdk" version="1.0.0">
+   <name>HalosysSDK</name>
+   <js-module name="HalosysSDK" src="www/HalosysSDK.js">
+      <clobbers target="HalosysSDK" />
+   </js-module>
+   <platform name="android">
+      <config-file parent="/*" target="res/xml/config.xml">
+         <feature name="HalosysSDK">
+            <param name="android-package" value="cordova.plugin.halosys.sdk.HalosysSDK" />
+         </feature>
+      </config-file>
+      <config-file parent="/*" target="AndroidManifest.xml" />
+      <source-file src="src/android/HalosysSDK.java" target-dir="src/cordova/plugin/halosys/sdk/HalosysSDK" />
+   </platform>
+   <platform name="ios">
+      <config-file parent="/*" target="config.xml">
+         <feature name="HalosysSDK">
+            <param name="ios-package" value="HalosysSDK" />
+         </feature>
+      </config-file>
+      <source-file src="src/ios/HalosysSDK.m" />
+   </platform>
+</plugin>
