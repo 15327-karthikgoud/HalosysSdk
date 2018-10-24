@@ -18,7 +18,10 @@ public class HalosysSDK extends CordovaPlugin {
         if(action.equals("Session")){
 this.Session(Context context, String _appname, String _appUrl, String _appKey, String _appSecret, boolean appLog, boolean _useRefreshToken);
 return true;
+        }else if(action.equals("Add")){
+            this.add(args,callback);
         }
+        else
         return false;
     }
 
@@ -30,5 +33,17 @@ return true;
         }
     }
 
+public void add(JSONArray args, CallbackContext callback){
+if(args !=null){
+try{
+int p1 = Integer.paseInt(args.getJSONObject(0).getString("param1"));
+int p2 = Integer.paseInt(args.getJSONObject(0).getString("param2"));
+return callback.sucess("" + (p1+p2));
+}catch(Exception ex){
+callback.error("something went wrong" + ex);
+}
+}
+callback.error('please pass valid arguments');
+}
 
 }
