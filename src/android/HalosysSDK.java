@@ -6,7 +6,7 @@ import org.apache.cordova.CallbackContext;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import src.android.api.ISession;
+//import src.android.api.ISession;
 /**
  * This class echoes a string called from JavaScript.
  */
@@ -15,10 +15,7 @@ public class HalosysSDK extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
        
-        if(action.equals("Session")){
-this.Session(Context context, String _appname, String _appUrl, String _appKey, String _appSecret, boolean appLog, boolean _useRefreshToken);
-return true;
-        }else if(action.equals("Add")){
+      if(action.equals("add")){
             this.add(args,callback);
         }
         else
