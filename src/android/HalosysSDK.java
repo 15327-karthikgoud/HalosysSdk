@@ -28,9 +28,9 @@ public class HalosysSDK extends CordovaPlugin {
     private void add(JSONArray args, CallbackContext callback){
 if(args !=null){
 try{
-int p1 = Integer.paseInt(args.getJSONObject(0).getString("param1"));
-int p2 = Integer.paseInt(args.getJSONObject(0).getString("param2"));
-callback.sucess("" + (p1+p2));
+//int p1 = Integer.parseInt()
+//int p2 = 
+callback.sucess("5");
 }
 catch(Exception ex){
 callback.error("something went wrong" + ex);
