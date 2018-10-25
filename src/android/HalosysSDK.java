@@ -16,6 +16,7 @@ public class HalosysSDK extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
       if(action.equals("add")){
             this.add(args,callbackContext);
+            return true;
         }
     
         return false;
@@ -24,18 +25,21 @@ public class HalosysSDK extends CordovaPlugin {
 
    
 
-    public void add(JSONArray args, CallbackContext callback){
+    private void add(JSONArray args, CallbackContext callback){
 if(args !=null){
 try{
 int p1 = Integer.paseInt(args.getJSONObject(0).getString("param1"));
 int p2 = Integer.paseInt(args.getJSONObject(0).getString("param2"));
-return callback.sucess("" + (p1+p2));
+callback.sucess("" + (p1+p2));
 }
 catch(Exception ex){
 callback.error("something went wrong" + ex);
 }
 }
+else{
+
 callback.error('please pass valid arguments');
+}
 }
 
 }
