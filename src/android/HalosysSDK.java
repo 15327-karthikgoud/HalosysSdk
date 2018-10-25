@@ -30,7 +30,7 @@ if(args !=null){
 try{
 //int p1 = Integer.parseInt()
 //int p2 = 
-callback.sucess("5");
+callback.success("5")
 }
 catch(Exception ex){
 callback.error("something went wrong" + ex);
