@@ -15,21 +15,14 @@ public class HalosysSDK extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
       if(action.equals("add")){
-            this.add(args,callback);
+            this.add(args,callbackContext);
         }
-        else
+    
         return false;
     }
 
 
-    private void coolMethod(String message, CallbackContext callbackContext) {
-        if (message != null && message.length() > 0) {
-            callbackContext.success(message);
-        } else {
-            callbackContext.error("Expected one non-empty string argument.");
-        }
-    }
-
+   
 
     public void add(JSONArray args, CallbackContext callback){
 if(args !=null){
@@ -37,7 +30,8 @@ try{
 int p1 = Integer.paseInt(args.getJSONObject(0).getString("param1"));
 int p2 = Integer.paseInt(args.getJSONObject(0).getString("param2"));
 return callback.sucess("" + (p1+p2));
-}catch(Exception ex){
+}
+catch(Exception ex){
 callback.error("something went wrong" + ex);
 }
 }
