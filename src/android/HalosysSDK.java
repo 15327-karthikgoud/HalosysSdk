@@ -38,7 +38,7 @@ callback.error("something went wrong" + ex);
 }
 else{
 
-callback.error('please pass valid arguments');
+callback.error("please pass valid arguments");
 }
 }
 
